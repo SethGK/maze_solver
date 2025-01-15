@@ -5,22 +5,15 @@ from lines import Point, Line, Cell
 def main():
     window = Window(800, 600)
     
+    cell1 = Cell(window)
+    cell2 = Cell(window)
 
-    c = Cell(window)
-    c.has_left_wall = False
-    c.draw(50, 50, 100, 100)
+    cell1.draw(100, 100, 200, 200)
+    cell2.draw(300, 300, 400, 400)
 
-    c = Cell(window)
-    c.has_right_wall = False
-    c.draw(125, 125, 200, 200)
-
-    c = Cell(window)
-    c.has_bottom_wall = False
-    c.draw(225, 225, 250, 250)
-
-    c = Cell(window)
-    c.has_top_wall = False
-    c.draw(300, 300, 500, 500)
+    cell1.draw_move(cell2)
+    cell1.draw_move(cell2, undo=True)
+    
     
     window.wait_for_close()
 
