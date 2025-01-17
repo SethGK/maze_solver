@@ -1,5 +1,3 @@
-
-
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -77,9 +75,3 @@ class Cell:
         move_line = Line(Point(center_x1, center_y1), Point(center_x2, center_y2))
         self._window.draw_line(move_line, fill_color=color)
 
-
-        
-
-
-        
-        
